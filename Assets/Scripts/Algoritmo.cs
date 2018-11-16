@@ -12,7 +12,7 @@ public class Algoritmo : MonoBehaviour {
 	public Text erro;
 	
 	int back = 0;
-	//int contador = 0;
+	int contador = 0;
 	int iteracao = 0;
 	int[,] lista = new int [81, 20];
 	int[,] numeros_possiveis = new int [81, 9];
@@ -249,7 +249,7 @@ public class Algoritmo : MonoBehaviour {
 		back = 0;
 		erro.text = " ";
 		iteracao = 0;
-		/*if(contador == 0){
+		if(contador == 0){
 			tabuleiro = new int[]
 			{
 				5,0,4,0,7,0,9,0,2,
@@ -306,18 +306,7 @@ public class Algoritmo : MonoBehaviour {
 			};
 		}
 		if(contador == 4){
-			tabuleiro = new int[]
-			{
-				5,3,4,6,7,8,9,1,2,
-				6,7,2,1,9,5,3,4,8,
-				1,9,8,3,4,2,5,6,7,
-				8,5,9,7,6,1,4,2,3,
-				4,2,6,8,5,3,7,9,1,
-				7,1,3,9,2,4,8,5,6,
-				9,6,1,5,3,7,2,8,4,
-				2,8,7,4,1,9,6,3,5,
-				3,4,5,2,8,6,1,7,9
-			};
+			
 		}
 		if(contador == 5){
 			
@@ -335,10 +324,10 @@ public class Algoritmo : MonoBehaviour {
 			
 		}
 		contador++;
-		if(contador == 5)
-			contador = 0;*/
+		if(contador == 4)
+			contador = 0;
 		
-		int aux;
+		/*int aux;
 		int flag;
 		System.Random random = new System.Random();
 		for (int i = 0; i < 81; i++)
@@ -353,7 +342,7 @@ public class Algoritmo : MonoBehaviour {
 			}
 			else
 				tabuleiro[i] = 0;
-		}
+		}*/
 		
 		for(int i = 0; i < 81; i++)
 		{
@@ -381,7 +370,6 @@ public class Algoritmo : MonoBehaviour {
 	{
 		while(iteracao>=0){
 			iteracao = preencher_tabuleiro(iteracao);
-			erro.text = tabuleiro[0]+" "+tabuleiro[1]+" "+tabuleiro[2];
 		}
 		if(iteracao == -2)
 			erro.text = "impossível resolver o tabuleiro";
